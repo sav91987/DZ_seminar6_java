@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Objects;
 
 public class NoteBook {
-    
+
     public int id;
     public String firm;
     public String model;
@@ -13,7 +13,7 @@ public class NoteBook {
     public int ram;
     public boolean isDiscreteCard;
 
-    public NoteBook (int id, String firm, String model, int diagonal, String cpu, int ram, boolean isDiscreteCard) {
+    public NoteBook(int id, String firm, String model, int diagonal, String cpu, int ram, boolean isDiscreteCard) {
         this.id = id;
         this.firm = firm;
         this.model = model;
@@ -33,13 +33,14 @@ public class NoteBook {
 
     @Override
     public String toString() {
-        return "NoteBook [id=" + id + ",\t firm=" + firm + ",\t model=" + model + ",\t diagonal=" + diagonal + ",\t CPU=" + cpu
+        return "NoteBook [id=" + id + ",\t firm=" + firm + ",\t model=" + model + ",\t diagonal=" + diagonal
+                + ",\t CPU=" + cpu
                 + ",\t RAM=" + ram + ",\t isDiscreteCard=" + isDiscreteCard + "]";
     }
 
     @Override
     public int hashCode() {
-       
+
         return Objects.hash(id, firm, model, diagonal, cpu, ram, isDiscreteCard);
     }
 
@@ -48,9 +49,5 @@ public class NoteBook {
         NoteBook note = (NoteBook) obj;
         return firm == note.firm && model == note.model;
     }
-
-    
-
-
 
 }
