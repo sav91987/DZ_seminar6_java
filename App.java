@@ -1,6 +1,8 @@
 import java.util.HashSet;
 
+import NoteBookLibrary.MainMenu;
 import NoteBookLibrary.NoteBook;
+
 
 public class App {
 
@@ -15,10 +17,10 @@ public class App {
         noteSet.add(note_2);
         noteSet.add(note_3);
 
-        NoteBook.printSet(noteSet);
+        MainMenu.mainMenu(noteSet);
 
-        System.out.println(noteSet.contains(note_1));
-        System.out.println(note_1.equals(note_2));
+        System.out.println("Проверка вхождения note_1 в noteSet: " + noteSet.contains(note_1));
+        System.out.println("Сравнение экзепляров класса note_1 и note_2: " + note_1.equals(note_2));
+
     }
-
 }
